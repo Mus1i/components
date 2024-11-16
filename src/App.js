@@ -3,8 +3,9 @@ import './App.css';
 // import { MyComponent } from './components/MyComponent';
 import { MyComponent2 } from './components/MyComponent2';
 import { NullComponent } from './components/NullComponent';
-import { TimeComponent } from './components/Time';
+import { TimeComponent } from './components/CurrentTimeComponent';
 import { ObjComponent } from './components/ImmunabilityComponent';
+import { Component } from './components/Rendering';
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					Learn React
 				</a>
 				<TimeComponent />
+				<Component />
 				<ObjComponent />
 				<NullComponent />
 				{/* <MyComponent type="normal" value="123" /> */}
