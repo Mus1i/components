@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { MyComponent } from './components/MyComponent';
+// import { MyComponent } from './components/MyComponent';
 import { MyComponent2 } from './components/MyComponent2';
 import { NullComponent } from './components/NullComponent';
 import { TimeComponent } from './components/Time';
+import { ObjComponent } from './components/ImmunabilityComponent';
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 					Learn React
 				</a>
 				<TimeComponent />
+				<ObjComponent />
 				<NullComponent />
 				{/* <MyComponent type="normal" value="123" /> */}
 				<MyComponent2 />
