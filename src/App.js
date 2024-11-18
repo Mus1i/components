@@ -6,10 +6,14 @@ import { NullComponent } from './components/NullComponent';
 import { TimeComponent } from './components/CurrentTimeComponent';
 import { ObjComponent } from './components/ImmunabilityComponent';
 import { Component } from './components/Rendering';
+import { EventResponse } from './components/EventResponse';
 
 function App() {
+	/*const onClick = () => {
+		console.log(123);
+	};*/
 	return (
-		<div className="App">
+		<div className="App" /*onClick={onClick}*/>
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
@@ -24,6 +28,7 @@ function App() {
 					Learn React
 				</a>
 				<TimeComponent />
+				<EventResponse />
 				<Component />
 				<ObjComponent />
 				<NullComponent />
