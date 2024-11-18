@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import styles from '../css/EventResponse.module.css';
+
 export const EventResponse = () => {
 	const [value, setValue] = useState(0);
 	const onClick = (event) => {
@@ -9,16 +11,26 @@ export const EventResponse = () => {
 	const onClickShow = () => {
 		setShowText(!showText);
 	};
-	const text = <div>Какой-то текст</div>;
+
+	const [showRedText, setShowRedText] = useState(false);
+	const onClickRed = () => {
+		setShowRedText(!showRedText);
+	};
+	const text = (
+		<div className={showRedText ? styles.red : styles.white}>Текст для красного</div>
+	);
 	return (
 		<>
 			<div>{value}</div>
 			<button onClick={onClick}>Прибавить +1</button>
 
-			{showText && text}
+			{showText && <div>Какой-то текст</div>}
 			<button onClick={onClickShow}>
 				{showText ? 'Скрыть' : 'Показать'} текст
 			</button>
+
+			{text}
+			<button onClick={onClickRed}>{showRedText ? 'Красный' : 'Белый'}</button>
 		</>
 	);
 };
